@@ -19,12 +19,12 @@ class ProductItem extends Model
         'qty_in_stock',
         'product_image',
         'price',
-
+        'name'
     ];
 
     public $timestamps = true;
 
-    public function products(): BelongsTo
+    public function product(): BelongsTo
     {
         return $this->belongsTo(Product::class, 'product_id');
     }

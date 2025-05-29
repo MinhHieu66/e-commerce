@@ -15,6 +15,7 @@ class Product extends Model
     protected $fillable = [
         'parent_category_id',
         'category_name',
+        'name',
     ];
 
     public $timestamps = true;
@@ -25,9 +26,12 @@ class Product extends Model
         return $this->belongsToMany(ProductCategory::class);
     }
 
+
     public function product_items(): HasMany
     {
-        return $this->HasMany(ProductItem::class, 'product_id');
+        return $this->hasMany(ProductItem::class, 'product_id');
     }
+
+
 
 }

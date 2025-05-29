@@ -164,7 +164,6 @@ class CartController extends Controller
     public function destroy(string $id)
     {
         $cart = Session::get('cart', []);
-
         // Tạo mảng mới để lưu lại các sản phẩm còn lại
         $updatedCart = [];
 
@@ -177,6 +176,5 @@ class CartController extends Controller
         // Ghi lại vào session
         Session::put('cart', $updatedCart);
         return redirect()->route('cart.index');
-
     }
 }

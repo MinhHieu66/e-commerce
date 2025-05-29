@@ -82,7 +82,6 @@
                 </div>
             </div>
         </from>
-
     </div>
     <!-- End Cart Area  -->
 

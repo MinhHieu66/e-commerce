@@ -37,4 +37,10 @@ class PageController extends Controller
         ];
         return view('page.home', $data);
     }
+
+    public function admin()
+    {
+        return view('template.admin');
+    }
+
 }
